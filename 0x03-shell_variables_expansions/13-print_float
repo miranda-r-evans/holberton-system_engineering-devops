@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $((NUM)) | tr '.' 'a' | grep -o -P '.{0,0}..{0,2}'
+printf '%.2f\n' $NUM
