@@ -1,2 +1,2 @@
 #!/bin/bash
-22-users_and_homes
+cat /etc/passwd | cut -d : -f 1,6
