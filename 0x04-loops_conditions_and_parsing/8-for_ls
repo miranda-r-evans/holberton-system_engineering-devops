@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# script that prints "Holberton School" 10 times
+
+for i in `ls`
+do
+	cut -d'-' -f2 i
+	(( i+=1 ))
+done
