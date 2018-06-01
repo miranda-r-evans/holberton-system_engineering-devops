@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# script that prints "Holberton School" 10 times
+# script that prints numbers 1 to 20
 
 i=1
 
