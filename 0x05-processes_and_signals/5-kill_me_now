@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # kill 4-to_infinity_and_beyond
 
-kill "$(ps -axu | grep 4-to_infinity_and_beyond | cut -d' ' -f2 | head -1)"
+kill "$(ps -aux | grep 4-to_infinity_and_beyond | cut -d' ' -f4 | head -1)"
