@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# displays all active IPv4 IPs
+
+arp | cut -d' ' -f1 | grep -v Address
