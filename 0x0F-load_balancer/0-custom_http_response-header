@@ -8,6 +8,6 @@ sudo sed -i "38i$string" /etc/nginx/sites-available/default
 echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
 string='\\n\terror_page 404 /custom_404.html;\n\tlocation /custom_404.html {\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n\t}'
 sudo sed -i "41i$string" /etc/nginx/sites-available/default
-string="\\\t\tadd_header X-Served-By $HOSTNAME;"
+string="\\\t\tadd_header X-Served-By $(cat /etc/hostname);"
 sudo sed -i "36i$string" /etc/nginx/sites-available/default
 sudo /etc/init.d/nginx start
