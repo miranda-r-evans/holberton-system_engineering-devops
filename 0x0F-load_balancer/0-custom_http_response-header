@@ -10,4 +10,4 @@ string='\\n\terror_page 404 /custom_404.html;\n\tlocation /custom_404.html {\n\t
 sudo sed -i "41i$string" /etc/nginx/sites-available/default
 string="\\\tadd_header X-Served-By $(cat /etc/hostname);"
 sudo sed -i "26i$string" /etc/nginx/sites-enabled/default
-sudo /etc/init.d/nginx start
+sudo /etc/init.d/nginx restart
