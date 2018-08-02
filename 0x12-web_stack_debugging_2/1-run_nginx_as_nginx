@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# changes nginx to run under nginx user
+sudo chown nginx /etc/nginx/nginx.conf
+sudo service nginx restart
