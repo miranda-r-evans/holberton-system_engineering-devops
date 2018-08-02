@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# changes nginx to run under nginx user
+sudo chown nginx /etc/nginx/nginx.conf
+sudo sed -i 's/80 default_server/8080 default_server/' /etc/nginx/sites-available/default
+sudo service nginx restart
