@@ -21,4 +21,4 @@ if __name__ == "__main__":
                                                           len(done_tasks),
                                                           len(all_tasks)))
     for task in done_tasks:
-        print('\t{}'.format(task.get('title')))
+        print('\t {}'.format(task.get('title')))
