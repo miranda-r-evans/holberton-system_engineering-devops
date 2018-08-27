@@ -4,8 +4,8 @@ script to get information on an employee's tasks
 '''
 
 if __name__ == "__main__":
-    import requests
     from sys import argv
+    import requests
 
     emp_id = int(argv[1])
     r = requests.get('https://jsonplaceholder.typicode.com/users/{}'
