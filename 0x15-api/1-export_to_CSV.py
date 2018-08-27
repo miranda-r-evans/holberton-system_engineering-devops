@@ -16,9 +16,8 @@ if __name__ == "__main__":
     tasks = r.json()
     all_tasks = [item for item in tasks if item.get('userId') == emp_id]
 
-
     with open('2.csv', 'w+') as f:
         for item in all_tasks:
             f.write('"{}","{}","{}","{}"\n'.format(emp_id, emp_name,
-                                                 item.get('completed'),
-                                                 item.get('title')))
+                                                   item.get('completed'),
+                                                   item.get('title')))
