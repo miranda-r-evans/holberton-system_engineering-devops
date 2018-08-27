@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 '''
 script to save task information for all employees in json format
 '''

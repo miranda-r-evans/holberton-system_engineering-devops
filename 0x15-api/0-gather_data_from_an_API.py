@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 '''
 script to get information on an employee's tasks
 '''
