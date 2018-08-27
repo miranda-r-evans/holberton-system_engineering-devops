@@ -11,7 +11,7 @@ if __name__ == "__main__":
     emp_id = argv[1]
     r = requests.get('https://jsonplaceholder.typicode.com/users/{}'
                      .format(emp_id))
-    emp_name = r.json().get('name')
+    emp_name = r.json().get('username')
 
     r = requests.get('https://jsonplaceholder.typicode.com/todos')
     tasks = r.json()

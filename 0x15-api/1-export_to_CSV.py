@@ -10,7 +10,7 @@ if __name__ == "__main__":
     emp_id = int(argv[1])
     r = requests.get('https://jsonplaceholder.typicode.com/users/{}'
                      .format(emp_id))
-    emp_name = r.json().get('name')
+    emp_name = r.json().get('username')
 
     r = requests.get('https://jsonplaceholder.typicode.com/todos')
     tasks = r.json()
@@ -19,6 +19,6 @@ if __name__ == "__main__":
 
     with open('2.csv', 'w+') as f:
         for item in all_tasks:
-            f.write('"{}","{}","{}","{}"'.format(emp_id, emp_name,
+            f.write('"{}","{}","{}","{}"\n'.format(emp_id, emp_name,
                                                  item.get('completed'),
                                                  item.get('title')))

@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     for employee in users:
         emp_id = employee.get('id')
-        emp_name = employee.get('name')
+        emp_name = employee.get('username')
         emp_tasks = [item for item in tasks if item.get('userId') == emp_id]
 
         emp_dict = {emp_id: []}
