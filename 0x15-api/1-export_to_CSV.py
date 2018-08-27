@@ -3,10 +3,10 @@
 script to save task information in csv format
 '''
 
-import requests
-from sys import argv
-
 if __name__ == "__main__":
+
+    import requests
+    from sys import argv
 
     emp_id = int(argv[1])
     r = requests.get('https://jsonplaceholder.typicode.com/users/{}'
