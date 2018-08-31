@@ -1,4 +1,4 @@
-#!/usr/bin/env pythion3
+#!/usr/bin/pythion3
 '''
 prints top 10 hot posts in a subreddit
 '''

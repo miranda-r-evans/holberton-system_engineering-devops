@@ -1,4 +1,4 @@
-#!/usr/bin/env pythion3
+#!/usr/bin/pythion3
 '''
 returns number of subscribers for a given subreddit
 '''

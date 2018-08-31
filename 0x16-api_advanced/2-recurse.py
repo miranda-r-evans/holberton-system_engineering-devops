@@ -1,4 +1,4 @@
-#!/usr/bin/env pythion3
+#!/usr/bin/pythion3
 '''
 returns full list of hot posts in a subreddit
 '''
