@@ -39,6 +39,7 @@ def count_words(subreddit, word_list, after='', keywords=None):
     if after == '':
         for key, value in sorted(keywords.items(),
                                  key=lambda tup: tup[1], reverse=True):
-            print('{}: {}'.format(key, value))
+            if (value != 0):
+                print('{}: {}'.format(key, value))
 
     return(keywords)
