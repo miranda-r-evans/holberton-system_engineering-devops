@@ -16,7 +16,7 @@ def count_words(subreddit, word_list, after='', keywords=None):
                      .format(subreddit, after),
                      headers=headers)
 
-    if keywords == None:
+    if keywords is None:
         keywords = {key: 0 for key in word_list}
 
     try:
@@ -33,10 +33,12 @@ def count_words(subreddit, word_list, after='', keywords=None):
     if (r.json()['data']['after'] is None):
         return keywords
 
-    keywords = count_words(subreddit, word_list, r.json()['data']['after'], keywords)
+    keywords = count_words(subreddit, word_list,
+                           r.json()['data']['after'], keywords)
 
     if after == '':
-        for key, value in sorted(keywords.items(), key=lambda tup: tup[1], reverse=True):
+        for key, value in sorted(keywords.items(),
+                                 key=lambda tup: tup[1], reverse=True):
             print('{}: {}'.format(key, value))
 
     return(keywords)
