@@ -1,4 +1,4 @@
-#!/usr/bin/pythion3
+#!/usr/bin/python3
 '''
 returns full list of hot posts in a subreddit
 '''
