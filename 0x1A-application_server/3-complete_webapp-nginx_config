@@ -1,3 +1,4 @@
+# includes /airbnb-onepage, /airbnb-dynamic and /api routes, and sets / route to webpage
 server {
 	listen 80 default_server;
 	listen [::]:80 default_server ipv6only=on;
