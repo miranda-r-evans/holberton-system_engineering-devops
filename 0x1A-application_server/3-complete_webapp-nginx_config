@@ -1,10 +1,9 @@
-# includes /airbnb-onepage and /airbnb-dynamic routes, and sets / route to api
 server {
 	listen 80 default_server;
 	listen [::]:80 default_server ipv6only=on;
 	add_header X-Served-By $hostname;
 
-	root /usr/share/nginx/html;
+	root /home/ubuntu/AirBnB_clone_v4/web_dynamic;
 	index index.html index.htm;
 
 	server_name localhost;
@@ -32,8 +31,17 @@ server {
                 proxy_pass http://127.0.0.1:8001;
         }
 
-        location /api {
+	location /api {
                 include proxy_params;
                 proxy_pass http://127.0.0.1:8002;
+        }
+
+        location ~* \.(css|js|png) {
+                root /home/ubuntu/AirBnB_clone_v4/web_dynamic;
+        }
+
+        location / {
+                include proxy_params;
+                proxy_pass http://127.0.0.1:8003/2-hbnb;
         }
 }
